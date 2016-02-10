@@ -1,0 +1,11 @@
+<h1>Inventory</h1>
+<ul>
+  @foreach(var job in Model)
+  {
+    <li>@job.GetTitle()</li>
+  }
+</ul>
+<p><a href="/">Add another job</a></p>
+<form action="/jobs_cleared" method="post">
+  <button type="submit" name="button">Clear all jobs</button>
+</form>
